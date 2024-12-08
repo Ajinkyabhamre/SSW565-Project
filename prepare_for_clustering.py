@@ -31,4 +31,8 @@ reduced_matrix = svd.fit_transform(tfidf_matrix)
 with open('reduced_matrix.pkl', 'wb') as f:
     pickle.dump(reduced_matrix, f)
 
+# Save the reduced features for visualization
+with open('reduced_features.pkl', 'wb') as f:
+    pickle.dump(reduced_matrix, f)
+
 print(f"Reduced matrix shape: {reduced_matrix.shape}")
