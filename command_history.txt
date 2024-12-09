@@ -1,0 +1,88 @@
+
+ 6599  docker build -t code-review-analysis .\n
+ 6600  docker run --rm -v $(pwd):/app code-review-analysis\n
+ 6601  docker build -t code-review-analysis .\n
+ 6602  docker run --rm -v $(pwd):/app code-review-analysis\n
+ 6603  docker build -t code-review-analysis .\n
+ 6604  docker run --rm -v $(pwd):/app code-review-analysis\n
+ 6605  docker build -t code-review-analysis .\ndocker run --rm -v $(pwd):/app code-review-analysis\n
+ 6606  docker run --rm -v $(pwd):/app -w /app code-review-analysis\n
+ 6607  docker build -t code-review-analysis .\n
+ 6608  docker run --rm -v $(pwd):/app -w /app code-review-analysis\n
+ 6609  docker build -t code-review-analysis .\n
+ 6610  docker run --rm -v $(pwd):/app -w /app code-review-analysis\n
+ 6611  docker build -t code-review-analysis .\n
+ 6612  docker run --rm -v $(pwd):/app -w /app code-review-analysis\n
+ 6613  docker build -t code-review-analysis .\n
+ 6614  docker run --rm -v $(pwd):/app -w /app code-review-analysis\n
+ 6615  docker build -t code-review-analysis .\ndocker run --rm -v $(pwd):/app -w /app code-review-analysis python validate_cleaned_data.py\n
+ 6616  docker ls
+ 6617  docker images
+ 6618  docker build -t code-review-analysis .\n
+ 6619  docker run --rm -v $(pwd):/app -w /app code-review-analysis python validate_cleaned_data.py\n
+ 6620  docker build -t code-review-analysis .\ndocker run --rm -v $(pwd):/app -w /app code-review-analysis python prepare_for_clustering.py\n
+ 6621  docker run --rm -v $(pwd):/app -w /app code-review-analysis python kmeans_clustering.py\n
+ 6622  docker build -t code-review-analysis .\n
+ 6623  docker run --rm -v $(pwd):/app -w /app code-review-analysis python kmeans_clustering.py\n
+ 6624  docker build -t code-review-analysis .\n
+ 6625  docker run --rm -it -v $(pwd):/app -w /app code-review-analysis bash\n
+ 6626  docker build -t code-review-analysis .\n
+ 6627  docker run --rm -v $(pwd):/app -w /app code-review-analysis python kmeans_clustering.py --clusters 8\n
+ 6628  docker build -t code-review-analysis .\n
+ 6629  docker run --rm -v $(pwd):/app -w /app code-review-analysis python kmeans_clustering.py --clusters 8\n
+ 6630  git init
+ 6631  git add .
+ 6632  git commit -m "kmeansClust"
+ 6633  docker run --rm -v $(pwd):/app -w /app code-review-analysis python cluster_data.py\n
+ 6634  git add .
+ 6635  git commit -m "clust-k=8"
+ 6636  docker run --rm -v $(pwd):/app -w /app code-review-analysis python inspect_clusters.py\n
+ 6637  git add .
+ 6638  git commit -m "cluster-distribution"
+ 6639  docker run --rm -v $(pwd):/app -w /app code-review-analysis python examine_clusters.py\n
+ 6640  git add . 
+ 6641  git commit -m "examine_clusters"
+ 6642  docker run --rm -v $(pwd):/app -w /app code-review-analysis python extract_centroids.py\n
+ 6643  git add .
+ 6644  git commit -m "Extract-Cluster-Centroids"
+ 6645  docker run --rm -v $(pwd):/app -w /app code-review-analysis python verify_extracted_files.py\n
+ 6646  git add .
+ 6647  git commit -m "verified-extracted-files"
+ 6648  docker run --rm -v $(pwd):/app -w /app code-review-analysis python analyze_clusters.py\n
+ 6649  git add .
+ 6650  git commit -m "analyzed-clusters"
+ 6651  docker run --rm -v $(pwd):/app -w /app code-review-analysis python generate_2d_visualization.py\n
+ 6652  docker run --rm -v $(pwd):/app -w /app code-review-analysis python prepare_for_clustering.py\n
+ 6653  docker run --rm -v $(pwd):/app -w /app code-review-analysis python generate_2d_visualization.py\n
+ 6654  git add .
+ 6655  git commit -m "2d-visualization"
+ 6656  docker run --rm -v $(pwd):/app -w /app code-review-analysis python analyze_clusters_attributes.py\n
+ 6657  docker run --rm -v $(pwd):/app -w /app code-review-analysis python label_clusters.py\n
+ 6658  git add .
+ 6659  git commit -m "Labeled-clusters-with-architectural-attributes."
+ 6660  docker run --rm -v $(pwd):/app -w /app code-review-analysis python train_classifier.py\n
+ 6661  git add .
+ 6662  git commit -m "Use labeled data to train a classifier."
+ 6663  docker run --rm -v $(pwd):/app -w /app code-review-analysis python auto_evaluate.py\n
+ 6664  docker run --rm -v $(pwd):/app -w /app code-review-analysis python analyze_labeled_data.py\n
+ 6665  docker run --rm -v $(pwd):/app -w /app code-review-analysis python auto_evaluate.py\n
+ 6666  git add .
+ 6667  git commit -m "tested-the-classifier"
+ 6668  docker run --rm -v $(pwd):/app -w /app code-review-analysis python validate_predictions.py\n
+ 6669  git add .
+ 6670  git commit -m "P2-done"
+ 6671  docker run --rm -v $(pwd):/app -w /app code-review-analysis python security_data_cleaning.py\n
+ 6672  docker run --rm -v $(pwd):/app -w /app code-review-analysis python validate_cleaned_data.py\n
+ 6673  git add .
+ 6674  git commit -m "P3-cleaned-data"
+ 6675  docker run --rm -v $(pwd):/app -w /app code-review-analysis python prepare_security_clustering.py\n
+ 6676  git add .
+ 6677  git commit -m "prepare_security_clustering"
+ 6678  docker run --rm -v $(pwd):/app -w /app code-review-analysis python security_clustering.py\n
+ 6679  docker run --rm -v $(pwd):/app -w /app code-review-analysis python analyze_security_clusters.py\n
+ 6680  docker run --rm -v $(pwd):/app -w /app code-review-analysis python validate_security_clusters.py\n
+ 6681  docker run --rm -v $(pwd):/app -w /app code-review-analysis python analyze_attribute_interactions.py\n
+ 6682  docker run --rm -v $(pwd):/app -w /app code-review-analysis python analyze_attribute_relationships.py\n
+ 6683  docker run --rm -v $(pwd):/app -w /app code-review-analysis python attribute_interaction_statistics.py\n
+ 6684  docker run --rm -v $(pwd):/app -w /app code-review-analysis python extract_interaction_examples.py\n
+ 6685  docker run --rm -v $(pwd):/app -w /app code-review-analysis python generate_p3_documentation.py\n
